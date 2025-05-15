@@ -29,7 +29,7 @@ public class SignUpController {
     public ResponseEntity<String> signupWithUser(
             @Valid @RequestBody SignupDTO signupDTO
             ){
-        ResponseEntity<String> result = signupService.isTenantExist(signupDTO);
+        ResponseEntity<String> result = signupService.createTenant(signupDTO);
         return result;
     }
 }
